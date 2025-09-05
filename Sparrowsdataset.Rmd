@@ -1,0 +1,65 @@
+---
+title: "Sparrow Dataset Analysis"
+author: "Francisco Solis"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##  R Coding with the Sparrow Dataset
+
+This data is a stratified random sample of 116 Savannah sparrows at Kent Island. The **weight (in grams)** and **wing length (in mm)** were obtained for birds from nests that were reduced, controlled, or enlarged. The data are available in the file `Sparrows` from the R package `Stat2Data`.
+
+Objectives a,b,c,d,e
+
+a. Load in the `Sparrows` data set from the R package `Stat2Data`, using the `str()` function to inspect data structure and further display the first 5 rows with `head()`. 
+b.  Create a scatterplot of weight versus wing length using `ggplot()`, and add a fitted regression line. 
+c.  Fit a simple linear regression and display the summary output using `summary()`. 
+d. Use `par(mfrow=c(1,2))` to display the following two diagnostic plots side-by-side: 
+    - the residual vs fitted 
+    - Normal Q-Q 
+e. Use `par(mfrow=c(1,2))` to display the following two diagnostic plots side-by-side: 
+    - Cook's distance  
+    - Residual vs Leverage  
+
+
+```{r sparrow}
+install.packages('Stat2Data',repos='https://mirror.csclub.uwaterloo.ca/CRAN/')
+library(Stat2Data)
+
+# (a) show data structure and display the first 5 rows
+data("Sparrows")
+str(Sparrows)
+head(Sparrows,5)
+
+
+# (b) using ggplot to form the scatterplot
+library(ggplot2)
+
+ggplot(Sparrows, aes(x=WingLength, y=Weight))+
+  geom_point(color="black", size=1)+
+  geom_smooth(method="lm",se=FALSE,color="blue", linetype="solid")+
+  labs(title="Scatterplot of Weight vs Wing Length", 
+       x="Wing length(mm)",
+       y="Weight (g)")
+# (c) Fiting a regression model and outputting the summary
+
+SLR<-lm(Weight~WingLength, data=Sparrows)
+summary(SLR)
+
+# (d) Diagnostic plots (Residuals vs Fitted plot and Normal QQ plot)
+par(mfrow=c(1,2))
+plot(SLR,which=1:2)
+
+par(mfrow=c(1,1)) 
+
+# (e) Diagnostic plots (Cook's distance and Leverage plots)
+par(mfrow=c(1,2))
+plot(SLR,which=4:5)
+
+par(mfrow=c(1,1)) 
+
+```
+
