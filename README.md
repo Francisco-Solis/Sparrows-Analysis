@@ -3,11 +3,11 @@
 # Overview:
 This project analyzes the **Sparrows** dataset in R, focusing on exploratory regression techniques and model diagnostics. This analysis walks through fundamental statistical concepts and applies them to real data. 
 # Content:
-Sparrow_Statistical_Analysis.pdf - Full report with code and plots
-Sparrowsdataset.Rmd - Source file for reproducibility in R
+1. Sparrow_Statistical_Analysis.pdf - Full report with code and plots
+2. Sparrowsdataset.Rmd - Source file for reproducibility in R
 # Requirements:
-R must be version 4.0 or greater
-R packages required for analysis- ggplot2, dplyr, Stat2Data (source for Sparrow dataset) 
+1. R must be version 4.0 or greater
+2. R packages required for analysis- ggplot2, dplyr, Stat2Data (source for Sparrow dataset) 
 # Analysis Overview:
 The report answers the following questions
 1. Determining sample size and number of variables in the dataset
