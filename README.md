@@ -4,7 +4,7 @@
 This project analyzes the **Sparrows** dataset in R, focusing on exploratory regression techniques and model diagnostics. This analysis walks through fundamental statistical concepts and applies them to real data. 
 # Content:
 1. Sparrows_Dataset_Report.pdf - Discussion of results
-2. Sparrow_Statistical_Analysis.pdf - knitted file containing R code and plots
+2. Sparrow_Statistical_Analysis.pdf - Knitted file containing R code and plots
 3. Sparrows_source_code.Rmd - Source file for reproducibility in R and or contributions
 # Requirements:
 1. R must be version 4.0 or greater
