@@ -19,7 +19,7 @@ The report answers the following questions
 6. Verifying model conditions via diagnostic plots
 7. Identifying outliers and or influential points using the residuals and leverage diagnostic plots
 # Key findings:
-Wing length is a significant and moderately strong predictor of weight in sparrows. The model is reliable for capturing this relationship, though some heteroscedasticity (unequal variance) suggests predictions are less consistent for sparrows with larger wing lengths. No problematic outliers or influential points were found.
+Wing length is a **significant and moderately strong predictor** of weight in sparrows. The model is reliable for capturing this relationship, though some heteroscedasticity (unequal variance) suggests predictions are less consistent for sparrows with larger wing lengths. **No problematic outliers or influential points were found**.
 
 # Contributing:
 This project was created as a statistical exercise. Suggestions for extending the analysis ( adding multiple regression or interaction terms) are welcome
